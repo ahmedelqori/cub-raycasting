@@ -4,7 +4,7 @@ int verify_extension(char *arg)
 {
     if (ft_strlen(arg) <= 4)
         return (0);
-    return (ft_strcmp(arg + ft_strlen(arg) - 4, ".cub"));
+    return (ft_strcmp_1(arg + ft_strlen(arg) - 4, ".cub"));
 }
 
 int ft_parsing(char *argument, t_parsing *data)

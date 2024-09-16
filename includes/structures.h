@@ -39,6 +39,17 @@ typedef struct s_vector
 	double	vert;
 }	t_vector;
 
+typedef struct s_parsing_helper
+{
+    int no_found;
+    int so_found;
+    int ea_found;
+    int we_found;
+    int c_found;
+    int f_found;
+    int player_found;
+}t_parsing_helper;
+
 typedef struct s_playerentity
 {
 	int			x;

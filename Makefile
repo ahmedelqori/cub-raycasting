@@ -25,14 +25,15 @@ SRC = ./src/main.c \
       ./src/parsing/ft_verify_content.c \
       ./src/parsing/ft_free_parsing.c \
       ./src/parsing/upload_content.c \
-      ./src/parsing/utils.c 
-      
+      ./src/parsing/utils.c \
+      ./src/parsing/get_next_line.c \
+      ./src/parsing/get_next_line_utils.c
 
 
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
       ./includes/structures.h
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra -fsanitize=address -g
 LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
@@ -41,14 +42,14 @@ OBJ = $(SRC:.c=.o)
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	$(CC) $(CFLAGS) $(OBJ) -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
 
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_PATH)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -Imlx_linux -O3 -c $< -o $@
+	$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

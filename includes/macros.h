@@ -105,5 +105,8 @@
 #define MAX_LINE 4096
 #endif
 
+#ifndef BUFFER_SIZE
+#define BUFFER_SIZE 42
+#endif
 
 #endif
