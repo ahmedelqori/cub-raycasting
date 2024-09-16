@@ -3,7 +3,7 @@ NAME = cub
 NAME_BONUS = cub_bonus
 
 SRC = ./src/main.c \
-      ./src/parsing/parsing.c \
+      ./src/parsing/ft_parsing.c \
       ./src/execution/reset_values.c \
       ./src/execution/background_drawing.c \
       ./src/execution/main_execution.c \
@@ -15,7 +15,18 @@ SRC = ./src/main.c \
       ./src/execution/asset_manager.c \
       ./src/execution/raycasting.c \
       ./src/execution/raycast_math.c \
-      ./src/execution/draw_images.c
+      ./src/execution/draw_images.c \
+      ./src/parsing/ft_normalize_map.c \
+      ./src/parsing/ft_verify_map.c \
+      ./src/parsing/ft_utils.c \
+      ./src/parsing/ft_verify_floor_ceil.c \
+      ./src/parsing/ft_verify_textures.c \
+      ./src/parsing/ft_verify_data.c \
+      ./src/parsing/ft_verify_content.c \
+      ./src/parsing/ft_free_parsing.c \
+      ./src/parsing/upload_content.c \
+      ./src/parsing/utils.c 
+      
 
 
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \

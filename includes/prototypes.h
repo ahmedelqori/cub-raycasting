@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prototypes.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:15:05 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/14 21:04:40 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:54:59 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 // ======================= PARSING ======================= //
 
-t_parsing	*ft_paring(void);
-void		ft_free_parsing(t_parsing *data);
+int         ft_parsing(char *argument, t_parsing *data);
+void        ft_free_parsing(t_parsing *data);
 
 // ======================= EXECUTION ======================= //
 void		ft_execute(t_parsing *parsing);

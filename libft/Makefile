@@ -25,7 +25,6 @@ SRC = ./ft_isalpha.c \
 	  ./ft_atoi.c    \
 	  ./ft_calloc.c  \
 	  ./ft_strdup.c  \
-	  ./ft_substr.c  \
 	  ./ft_strjoin.c \
 	  ./ft_strtrim.c \
 	  ./ft_split.c   \
@@ -45,9 +44,7 @@ SRC = ./ft_isalpha.c \
 	  ./ft_lstdelone_bonus.c\
 	  ./ft_lstclear_bonus.c\
 	  ./ft_lstiter_bonus.c\
-	  ./ft_lstmap_bonus.c\
-	  ./get_next_line.c\
-	  ./get_next_line_utils.c\
+	  ./ft_lstmap_bonus.c
 		  
 
 OBJ = $(SRC:.c=.o)

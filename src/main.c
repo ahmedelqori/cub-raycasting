@@ -3,23 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 17:11:25 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/09 20:04:05 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:54:53 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub.h"
 
-int main(void)
+void ft_initialize_data(t_parsing *data)
 {
-    t_parsing  *data;
+    data->east = NULL;
+    data->west = NULL;
+    data->north = NULL;
+    data->south = NULL;
+}
 
-    data = NULL;
-    data = ft_paring();
-    ft_execute(data);
-    ft_free_parsing(data);
-    return (1);
+int main(int ac, char **av)
+{
+    t_parsing   data;
+
+    ft_initialize_data(&data);
+    if (ac == 2)
+    {
+        if (!ft_parsing(av[1], &data))
+            return (ft_free_parsing(&data), 1);
+        ft_execute(&data);
+    }
+    else
+    {
+        return (write(2, "Error\nEnter a valid number of argument\n", 40), 1);
+    }
+    return (ft_free_parsing(&data), 0);
 }
 

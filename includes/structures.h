@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:15:54 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/16 13:02:41 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:15:54 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ typedef struct s_parsing
 	char			*south;
 	char			*west;
 	char			*east;
-	unsigned int	floor;
-	unsigned int	ceil;
-	char			**map;
+	int	floor;
+	int	ceil;
+	char			*map[MAX_LINE];
 	int				map_x;
 	int				map_y;
 	char			direction;

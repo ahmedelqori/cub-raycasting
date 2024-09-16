@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:04:48 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/02/25 14:00:52 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/09/16 13:37:38 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
-# include "get_next_line.h"
 
 // PART 1 Mondabtory
 int				ft_isalpha(int c);
