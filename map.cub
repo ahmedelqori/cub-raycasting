@@ -6,16 +6,16 @@
 
 
 
-NO ./images/N.xpm
-SO ./images/S.xpm    
+NO ./images/n.xpm
+SO ./images/s.xpm    
 
 
 
 
-WE ./images/W.xpm
+WE ./images/w.xpm
 
 
-EA ./images/E.xpm
+EA ./images/e.xpm
 
 
 F 220,100,0
