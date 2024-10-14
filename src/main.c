@@ -33,7 +33,8 @@ int main(int ac, char **av)
     }
     else
     {
-        return (write(2, "Error\nEnter a valid number of argument\n", 40), 1);
+        ft_putstr_fd("Error\nEnter a valid number of argument\n", 2);
+        return(1);
     }
     return (ft_free_parsing(&data), 0);
 }
