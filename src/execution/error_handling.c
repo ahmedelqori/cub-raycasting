@@ -35,6 +35,7 @@ int	terminate_with_cleanup(int key, t_container *container)
 	mlx_destroy_image(container->mlx, container->bundles.background.img);
 	mlx_destroy_window(container->mlx, container->win);
 	mlx_destroy_display(container->mlx);
+	free(container->mlx);
 	free(container);
 	key = 0;
 	exit(key);
