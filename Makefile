@@ -1,3 +1,9 @@
+GREEN = \033[1;3;32m
+RED = \033[1;3;31m
+BLUE = \033[34m
+RESET = \033[0m
+MAGENTA = \033[1;35m
+
 CC = cc
 NAME = cub
 NAME_BONUS = cub_bonus
@@ -30,11 +36,10 @@ SRC = ./src/main.c \
       ./src/parsing/get_next_line.c \
       ./src/parsing/get_next_line_utils.c
 
-
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
       ./includes/structures.h
 
-CFLAGS = -Wall -Wextra #-Werror
+CFLAGS = -Wall -Wextra -Werror
 LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
@@ -43,22 +48,33 @@ OBJ = $(SRC:.c=.o)
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
-
+	@echo "$(MAGENTA)>>>> START BUILDING CUB3D <<<<$(RESET)"
+	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
+	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 
 $(LIBFT):
-	$(MAKE) -C $(LIBFT_PATH)
+	@echo "$(MAGENTA)>>>> START BUILDING LIBFT <<<<$(RESET)"
+	@$(MAKE) -C $(LIBFT_PATH) > /dev/null
+	@echo "$(GREEN)\t\t✓ LIBFT$(RESET)"
 
 %.o: %.c
-	$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
+	@$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
-	$(MAKE) clean -C $(LIBFT_PATH)
+	@echo "$(MAGENTA)>>>> Start removing $(NAME) Object files <<<<$(RESET)"
+	@rm -f $(OBJ)
+	@echo "$(RED)\t\t✓ deleted objects $(NAME)$(RESET)"
+	@echo "$(MAGENTA)>>>> Start removing libft Object files <<<<$(RESET)"
+	@$(MAKE) clean -C $(LIBFT_PATH) > /dev/null
+	@echo "$(RED)\t\t✓ deleted objects libft$(RESET)"
 
 fclean: clean
-	rm -f $(NAME)
-	$(MAKE) fclean -C $(LIBFT_PATH)
+	@echo "$(MAGENTA)>>>> Start removing $(NAME) <<<<$(RESET)"
+	@rm -f $(NAME)
+	@echo "$(RED)\t\t✓ deleted $(NAME)$(RESET)"
+	@echo "$(MAGENTA)>>>> Start removing libft <<<<$(RESET)"
+	@$(MAKE) fclean -C $(LIBFT_PATH) > /dev/null
+	@echo "$(RED)\t\t✓ deleted libft$(RESET)"
 
 re: fclean all
 

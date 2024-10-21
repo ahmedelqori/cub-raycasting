@@ -48,18 +48,20 @@ SRC = ./ft_isalpha.c \
 
 OBJ = $(SRC:.c=.o)
 
-$(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
-
 
 all: $(NAME)
 
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-		$(RM) $(OBJ) 
+		@$(RM) $(OBJ) 
 
 fclean: clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
 
 re: fclean all
 .PHONY: fclean all re  clean
