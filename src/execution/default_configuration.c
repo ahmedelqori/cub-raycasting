@@ -60,8 +60,10 @@ static char	*getorientation(void)
 
 static double	*getdirections(int vh)
 {
-	static double	horz_dir[4] = {DIR_EAST_HORZ, DIR_WEST_HORZ, DIR_NORTH_HORZ, DIR_SOUTH_HORZ};
-	static double	vert_dir[4] = {DIR_EAST_VERT, DIR_WEST_VERT, DIR_NORTH_VERT, DIR_SOUTH_VERT};
+	static double	horz_dir[4] = {DIR_EAST_HORZ, DIR_WEST_HORZ,
+		DIR_NORTH_HORZ, DIR_SOUTH_HORZ};
+	static double	vert_dir[4] = {DIR_EAST_VERT, DIR_WEST_VERT,
+		DIR_NORTH_VERT, DIR_SOUTH_VERT};
 
 	if (vh == X)
 		return (horz_dir);
