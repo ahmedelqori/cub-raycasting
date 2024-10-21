@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 15:11:52 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 15:17:30 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:18:51 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,8 @@ static char	*getorientation(void)
 
 static double	*getdirections(int vh)
 {
-	static double	horz_dir[4] = {DIR_EAST_HORZ, DIR_WEST_HORZ, DIR_NORTH_HORZ,
-		DIR_SOUTH_HORZ};
-	static double	vert_dir[4] = {DIR_EAST_VERT, DIR_WEST_VERT, DIR_NORTH_VERT,
-		DIR_SOUTH_VERT};
+	static double	horz_dir[4] = {DIR_EAST_HORZ, DIR_WEST_HORZ, DIR_NORTH_HORZ, DIR_SOUTH_HORZ};
+	static double	vert_dir[4] = {DIR_EAST_VERT, DIR_WEST_VERT, DIR_NORTH_VERT, DIR_SOUTH_VERT};
 
 	if (vh == X)
 		return (horz_dir);

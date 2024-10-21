@@ -87,7 +87,6 @@
 # define PLN_EAST_VERT 0.66f
 # define PLN_WEST_VERT -0.66f
 
-
 # define MOVE_SPEED 0.08f
 # define ROTATION_SPEED 0.01f
 
@@ -95,6 +94,7 @@
 # define DISTANCE_IN_BACKWARD 0.8f
 # define DISTANCE_IN_LEFT -0.15f
 # define DISTANCE_IN_RIGHT 0.15f
+# define MAXDOUBLE 1e30
 
 # define KEY_A 97
 # define KEY_D 100
@@ -110,11 +110,7 @@
 # define RIGHT 'D'
 # define CAMERA_LEFT 'L'
 # define CAMERA_RIGHT 'R'
-
 # define WALL '1'
-
-// tmp
-# define MAXDOUBLE 1e30
 
 // ================== ERRORS =============
 
@@ -122,12 +118,12 @@
 
 // =================PARSING=====================
 
-#ifndef MAX_LINE
-#define MAX_LINE 4096
-#endif
+# ifndef MAX_LINE
+#  define MAX_LINE 4096
+# endif
 
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 #endif

@@ -21,8 +21,6 @@ void	safe_exit(t_parsing *parsing, int status, char *error)
 
 int	terminate_with_cleanup(int key, t_container *container)
 {
-	if (key == 9728)
-		exit(0);
 	ft_free_parsing(container->data);
 	mlx_destroy_image(container->mlx, \
 	container->bundles.walls.orientations[0].img);
