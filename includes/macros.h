@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:16:18 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 16:18:04 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:37:52 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@
 # define PLN_EAST_VERT 0.66f
 # define PLN_WEST_VERT -0.66f
 
-# define MOVE_SPEED 0.08f
+# define MOVE_SPEED 0.02f
 # define ROTATION_SPEED 0.01f
 
 # define DISTANCE_IN_FORWARD -0.22f
