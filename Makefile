@@ -1,6 +1,6 @@
 GREEN = \033[1;3;32m
 RED = \033[1;3;31m
-BLUE = \033[34m
+YELLOW=\033[1;3;33m
 RESET = \033[0m
 MAGENTA = \033[1;35m
 
@@ -51,6 +51,7 @@ $(NAME): $(OBJ) $(LIB)
 	@echo "$(MAGENTA)>>>> START BUILDING CUB3D <<<<$(RESET)"
 	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
+	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 
 $(LIBFT):
 	@echo "$(MAGENTA)>>>> START BUILDING LIBFT <<<<$(RESET)"
