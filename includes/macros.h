@@ -67,12 +67,33 @@
 # define WEST_X -1.0f
 # define WEST_Y 0.0f
 
+# define DIR_NORTH_HORZ 0.0f
+# define DIR_SOUTH_HORZ 0.0f
+# define DIR_EAST_HORZ 1.0f
+# define DIR_WEST_HORZ -1.0f
+
+# define DIR_NORTH_VERT -1.0f
+# define DIR_SOUTH_VERT 1.0f
+# define DIR_EAST_VERT 0.0f
+# define DIR_WEST_VERT 0.0f
+
+# define PLN_NORTH_HORZ 0.66f
+# define PLN_SOUTH_HORZ -0.66f
+# define PLN_EAST_HORZ 0.0f
+# define PLN_WEST_HORZ 0.0f
+
+# define PLN_NORTH_VERT 0.0f
+# define PLN_SOUTH_VERT 0.0f
+# define PLN_EAST_VERT 0.66f
+# define PLN_WEST_VERT -0.66f
+
+
 # define MOVE_SPEED 0.08f
 # define ROTATION_SPEED 0.01f
 
 # define DISTANCE_IN_FORWARD -0.22f
 # define DISTANCE_IN_BACKWARD 0.8f
-# define DISTANCE_IN_LEFT -0.1f
+# define DISTANCE_IN_LEFT -0.15f
 # define DISTANCE_IN_RIGHT 0.15f
 
 # define KEY_A 97
