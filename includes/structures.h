@@ -23,8 +23,8 @@ typedef struct s_parsing
 	char			*south;
 	char			*west;
 	char			*east;
-	int	floor;
-	int	ceil;
+	int				floor;
+	int				ceil;
 	char			*map[MAX_LINE];
 	int				map_x;
 	int				map_y;
@@ -41,14 +41,14 @@ typedef struct s_vector
 
 typedef struct s_parsing_helper
 {
-    int no_found;
-    int so_found;
-    int ea_found;
-    int we_found;
-    int c_found;
-    int f_found;
-    int player_found;
-}t_parsing_helper;
+	int	no_found;
+	int	so_found;
+	int	ea_found;
+	int	we_found;
+	int	c_found;
+	int	f_found;
+	int	player_found;
+}	t_parsing_helper;
 
 typedef struct s_playerentity
 {
