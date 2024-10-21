@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 17:11:25 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/16 13:54:53 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:11:07 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		ft_putstr_fd("Error\nEnter a valid number of argument\n", 2);
+		ft_putstr_fd(ERROR_MAP, 2);
 		return (1);
 	}
 	return (ft_free_parsing(&data), 0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   macros.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:16:18 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/16 13:16:36 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:10:59 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@
 // ================== ERRORS =============
 
 # define ALLOC_CONTAINER "Failed Allocation of container"
-
+# define ERROR_MAP "Error\nEnter a valid number of argument\n"
 // =================PARSING=====================
 
 # ifndef MAX_LINE
