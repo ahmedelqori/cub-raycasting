@@ -1,29 +1,10 @@
-
-
-
-
-
-
-
-
-NO ./images/n.xpma
-SO ./images/s.xpm    
-
-
-
-
+NO ./images/n.xpm
+SO ./images/s.xpm   
 WE ./images/w.xpm
-
-
 EA ./images/e.xpm
-
 
 C 146,161,207
 F 64,42,15
-
-
-
-
 
 111111111111111111111111111111111111
 100000000000000000000000000000000001

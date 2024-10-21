@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:07:00 by meedivo           #+#    #+#             */
-/*   Updated: 2024/10/21 16:13:21 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:31:33 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	initialize_images(t_container *container)
 	|| !container->bundles.walls.orientations[3].img)
 	{
 		printf(ERROR_TEXTURES);
-		exit(1);
+		mouse_hook(container);
 	}
 	while (++index < 4)
 		get_data_from_textures(array_of_images(container, index));
