@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:53:38 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/14 03:54:10 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:16:51 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	draw_images_to_game(t_container *game, int x)
 		draw_pixels_to_screen(game, x, y);
 		y++;
 	}
+	game->player.hit = 0;
 }
 
 void	get_textures_x(t_container *game)
