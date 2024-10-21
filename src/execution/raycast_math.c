@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:40:07 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/14 03:41:13 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:28:31 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,24 @@ void	calc_ray_for_y_x(t_container *container)
 		container->player.delta.vert = fabs(1 / container->player.ray.vert);
 }
 
-void	calculate_camera_direction(t_container *game)
+void	calculate_camera_direction(t_container *container)
 {
-	if (game->player.side == 0)
-		game->player.perpwalldist = (game->player.sidedist.horz - \
-		game->player.delta.horz);
+	if (container->player.side == 0)
+		container->player.perpwalldist = (container->player.sidedist.horz - \
+		container->player.delta.horz);
 	else
-		game->player.perpwalldist = (game->player.sidedist.vert - \
-		game->player.delta.vert);
-	game->bundles.walls.lineheight = (int)(SCREEN_HEIGHT / \
-	game->player.perpwalldist);
-	game->bundles.walls.drawstart = -game->bundles.walls.lineheight / 2
+		container->player.perpwalldist = (container->player.sidedist.vert - \
+		container->player.delta.vert);
+	container->bundles.walls.lineheight = (int)(SCREEN_HEIGHT / \
+	container->player.perpwalldist);
+	container->bundles.walls.drawstart = -container->bundles.walls.lineheight \
+			/ 2 + SCREEN_HEIGHT / 2;
+	if (container->bundles.walls.drawstart < 0)
+		container->bundles.walls.drawstart = 0;
+	container->bundles.walls.drawend = container->bundles.walls.lineheight / 2
 		+ SCREEN_HEIGHT / 2;
-	if (game->bundles.walls.drawstart < 0)
-		game->bundles.walls.drawstart = 0;
-	game->bundles.walls.drawend = game->bundles.walls.lineheight / 2
-		+ SCREEN_HEIGHT / 2;
-	if (game->bundles.walls.drawend >= SCREEN_HEIGHT)
-		game->bundles.walls.drawend = SCREEN_HEIGHT - 1;
+	if (container->bundles.walls.drawend >= SCREEN_HEIGHT)
+		container->bundles.walls.drawend = SCREEN_HEIGHT - 1;
 }
 
 void	calc_step_for_y_x(t_container *container)
