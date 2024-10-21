@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   failures.c                                         :+:      :+:    :+:   */
+/*   error_handling.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:54:51 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/14 04:23:50 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:16:37 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	terminate_with_cleanup(int key, t_container *container)
 	exit(key);
 }
 
-int mouse_hook(t_container *container)
+int	mouse_hook(t_container *container)
 {
 	ft_free_parsing(container->data);
 	mlx_destroy_image(container->mlx, \

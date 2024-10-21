@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/21 15:01:50 by relhamma          #+#    #+#             */
+/*   Updated: 2024/10/21 15:10:37 by relhamma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/cub.h"
 
 char	*ft_substr(char *str)
@@ -7,15 +19,15 @@ char	*ft_substr(char *str)
 
 	i = 0;
 	if (!str)
-		return NULL;
+		return (NULL);
 	while (str[i] && str[i] != '\n')
 	{
 		buffer[i] = str[i];
 		i++;
 	}
 	buffer[i] = 0;
-	free (str);
-	return ft_strdup(buffer);
+	free(str);
+	return (ft_strdup(buffer));
 }
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

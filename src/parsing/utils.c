@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/21 15:02:04 by relhamma          #+#    #+#             */
+/*   Updated: 2024/10/21 15:10:14 by relhamma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/cub.h"
 
-int ft_strcmp_1(char *s1, char *s2)
+int	ft_strcmp_1(char *s1, char *s2)
 {
-    if (!*s1 && !*s2)
-        return (1);
-    else if (*s1 != *s2)
-        return (0);
-    else
-        return (ft_strcmp_1(s1 + 1, s2 + 1));
+	if (!*s1 && !*s2)
+		return (1);
+	else if (*s1 != *s2)
+		return (0);
+	else
+		return (ft_strcmp_1(s1 + 1, s2 + 1));
 }

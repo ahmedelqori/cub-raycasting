@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_key_events.c                               :+:      :+:    :+:   */
+/*   key_event_processing.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 16:13:40 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/11 09:59:17 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:16:24 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	key_release(int key, t_container *container);
 
 void	handle_events(t_container *container)
 {
-	mlx_hook(container->win, 17, 0, mouse_hook , container);
+	mlx_hook(container->win, 17, 0, mouse_hook, container);
 	mlx_hook(container->win, 2, 1L << 0, key_press, container);
 	mlx_hook(container->win, 3, 1L << 1, key_release, container);
 }
