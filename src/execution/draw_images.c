@@ -12,9 +12,9 @@
 
 #include "../../includes/cub.h"
 
-void	helpdraw(t_container *game);
+void	get_textures_x(t_container *game);
 int		img_px(t_texturedata img, int x, int y);
-void	helpdraw2(t_container *game, int x, int y);
+void	draw_pixels_to_screen(t_container *game, int x, int y);
 void	paint_on_screen_by_pixel(t_texturedata *img, int x, int y, int color);
 
 void	draw_images_to_game(t_container *game, int x)
@@ -25,19 +25,19 @@ void	draw_images_to_game(t_container *game, int x)
 
 	tex_height = game->bundles.walls.orientations[0].height;
 	y = game->bundles.walls.drawstart;
-	helpdraw(game);
+	get_textures_x(game);
 	step = 1.0 * tex_height / game->bundles.walls.lineheight;
 	game->bundles.walls.texy = (game->bundles.walls.drawstart - SCREEN_HEIGHT
 			/ 2 + game->bundles.walls.lineheight / 2) * step;
 	while (y < game->bundles.walls.drawend)
 	{
 		game->bundles.walls.texy += step;
-		helpdraw2(game, x, y);
+		draw_pixels_to_screen(game, x, y);
 		y++;
 	}
 }
 
-void	helpdraw(t_container *game)
+void	get_textures_x(t_container *game)
 {
 	int	tex_width;
 
@@ -73,7 +73,7 @@ void	paint_on_screen_by_pixel(t_texturedata *img, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-void	helpdraw2(t_container *game, int x, int y)
+void	draw_pixels_to_screen(t_container *game, int x, int y)
 {
 	if (game->player.side == 0 && game->player.ray.horz > 0)
 		paint_on_screen_by_pixel(&game->bundles.background, x, y,

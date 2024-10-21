@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prototypes.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: relhamma <relhamma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:15:05 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/16 13:54:59 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:07:29 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ void			calculate_camera_direction(t_container *game);
 void			calc_step_for_y_x(t_container *container);
 void			draw_images_to_game(t_container *game, int x);
 void			digital_differential_analysis(t_container *game);
+void			check_hit(t_container *game);
 
 #endif

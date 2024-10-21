@@ -16,6 +16,7 @@ SRC = ./src/main.c \
       ./src/execution/raycasting.c \
       ./src/execution/raycast_math.c \
       ./src/execution/draw_images.c \
+      ./src/execution/ray_hit_the_wall.c \
       ./src/parsing/ft_normalize_map.c \
       ./src/parsing/ft_verify_map.c \
       ./src/parsing/ft_utils.c \
