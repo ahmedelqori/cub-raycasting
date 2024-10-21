@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_images.c                                      :+:      :+:    :+:   */
+/*   asset_manager.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meedivo <meedivo@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 18:07:00 by meedivo           #+#    #+#             */
-/*   Updated: 2024/09/09 20:02:41 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:13:21 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	initialize_images(t_container *container)
 	!container->bundles.walls.orientations[2].img \
 	|| !container->bundles.walls.orientations[3].img)
 	{
-		printf("Error Invalid Textures\n");
+		printf(ERROR_TEXTURES);
 		exit(1);
 	}
 	while (++index < 4)

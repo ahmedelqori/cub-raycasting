@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:16:18 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 16:10:59 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:13:14 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@
 
 # define ALLOC_CONTAINER "Failed Allocation of container"
 # define ERROR_MAP "Error\nEnter a valid number of argument\n"
+# define ERROR_TEXTURES "Error In Textures\n"
 // =================PARSING=====================
 
 # ifndef MAX_LINE
