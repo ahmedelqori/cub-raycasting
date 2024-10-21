@@ -48,13 +48,13 @@ OBJ = $(SRC:.c=.o)
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	@echo "$(MAGENTA)>>>> START BUILDING CUB3D <<<<$(RESET)"
+	@echo "$(MAGENTA)>>>> BUILDING CUB3D <<<<$(RESET)"
 	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 
 $(LIBFT):
-	@echo "$(MAGENTA)>>>> START BUILDING LIBFT <<<<$(RESET)"
+	@echo "$(MAGENTA)>>>> BUILDING LIBFT <<<<$(RESET)"
 	@$(MAKE) -C $(LIBFT_PATH) > /dev/null
 	@echo "$(GREEN)\t\t✓ LIBFT$(RESET)"
 
