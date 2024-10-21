@@ -27,7 +27,7 @@ int verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
 
     error = 0;
     i = 0;
-    if (!ft_strcmp("F", *buffer))
+    if (ft_strcmp("F", *buffer))
         return (0);
     temp = ft_split(*(buffer + 1), ',');
     while (temp[i])
@@ -55,7 +55,7 @@ int verify_ceil(char **buffer, t_parsing *data, t_parsing_helper *helper)
 
     error = 0;
     i = 0;
-    if (!ft_strcmp("C", *buffer))
+    if (ft_strcmp("C", *buffer))
         return (0);
     temp = ft_split(*(buffer + 1), ',');
     while (temp[i])

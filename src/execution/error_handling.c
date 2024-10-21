@@ -40,3 +40,22 @@ int	terminate_with_cleanup(int key, t_container *container)
 	key = 0;
 	exit(key);
 }
+
+int mouse_hook(t_container *container)
+{
+	ft_free_parsing(container->data);
+	mlx_destroy_image(container->mlx, \
+	container->bundles.walls.orientations[0].img);
+	mlx_destroy_image(container->mlx, \
+	container->bundles.walls.orientations[1].img);
+	mlx_destroy_image(container->mlx, \
+	container->bundles.walls.orientations[2].img);
+	mlx_destroy_image(container->mlx, \
+	container->bundles.walls.orientations[3].img);
+	mlx_destroy_image(container->mlx, container->bundles.background.img);
+	mlx_destroy_window(container->mlx, container->win);
+	mlx_destroy_display(container->mlx);
+	free(container->mlx);
+	free(container);
+	exit(0);
+}

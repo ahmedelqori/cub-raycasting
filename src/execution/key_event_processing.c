@@ -18,7 +18,7 @@ static int	key_release(int key, t_container *container);
 
 void	handle_events(t_container *container)
 {
-	mlx_hook(container->win, 17, 1L << 17, terminate_with_cleanup, container);
+	mlx_hook(container->win, 17, 0, mouse_hook , container);
 	mlx_hook(container->win, 2, 1L << 0, key_press, container);
 	mlx_hook(container->win, 3, 1L << 1, key_release, container);
 }

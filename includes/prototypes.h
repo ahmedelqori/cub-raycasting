@@ -46,6 +46,7 @@ void		ft_execute(t_parsing *parsing);
 void		safe_exit(t_parsing *parsing, int status, char *error);
 void		initialize_defaults(t_container *container);
 int			terminate_with_cleanup(int key, t_container *container);
+int 		mouse_hook(t_container *container);
 void		handle_events(t_container *container);
 int			update_render(t_container *cub);
 void		initialize_images(t_container *container);
