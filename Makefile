@@ -42,7 +42,7 @@ LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prot
 
 CFLAGS = -Wall -Wextra  -Werror -fsanitize=address -g
 LIBFT_PATH = ./libft
-MLX_PATH = ./minilibx-linux
+MLX_PATH = ./minilibx
 LIBFT = $(LIBFT_PATH)/libft.a
 MLX= $(MLX_PATH)/libmlx.a
 OBJ = $(SRC:.c=.o)
