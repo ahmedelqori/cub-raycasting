@@ -52,7 +52,7 @@ all: $(MLX) $(LIBFT) $(NAME)
 	@echo "";
 
 $(NAME): $(OBJ) $(LIB)
-	@$(CC) $(CFLAGS) $(OBJ) -fsanitize=address -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) $(MLX) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) $(MLX) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 	
