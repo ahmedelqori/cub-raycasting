@@ -48,18 +48,18 @@ OBJ = $(SRC:.c=.o)
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	@echo "$(MAGENTA)>>>> BUILDING CUB3D <<<<$(RESET)"
 	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 
 $(LIBFT):
-	@echo "$(MAGENTA)>>>> BUILDING LIBFT <<<<$(RESET)"
 	@$(MAKE) -C $(LIBFT_PATH) > /dev/null
 	@echo "$(GREEN)\t\t✓ LIBFT$(RESET)"
 
 %.o: %.c
+	@echo " $(YELLOW)$(BOLD)$(ITALIC)COMPILE OBJECT $(@)$(RESET)"
 	@$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
+
 
 clean:
 	@echo "$(MAGENTA)>>>> Start removing $(NAME) Object files <<<<$(RESET)"
