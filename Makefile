@@ -41,7 +41,7 @@ SRC = ./src/main.c \
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
 	./includes/structures.h
 
-CFLAGS = -Wall -Wextra  -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra  -Werror #-fsanitize=address -g
 LIBFT_PATH = ./libft
 MLX_PATH = ./minilibx
 LIBFT = $(LIBFT_PATH)/libft.a
