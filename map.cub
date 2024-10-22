@@ -3,7 +3,7 @@ SO ./images/s.xpm
 WE ./images/w.xpm
 EA ./images/e.xpm
 
-C 146,161,207
+C 146,161, 207
 F 64,42,15
 
         1111111111111111111111111

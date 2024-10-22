@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:25 by relhamma          #+#    #+#             */
-/*   Updated: 2024/10/21 15:11:44 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/22 11:28:42 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	is_num(char *line)
 	int	i;
 
 	i = 0;
+	while(is_space(line[i]))
+		i++;
 	while (line[i])
 	{
 		if (line[i] < '0' || line[i] > '9')
@@ -41,7 +43,7 @@ int	verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	i = 0;
 	if (ft_strcmp("F", *buffer))
 		return (0);
-	temp = ft_split(*(buffer + 1), ',');
+	temp = ft_split_with_empty(*(buffer + 1), ',');
 	while (temp[i])
 	{
 		if (!is_num(temp[i]) || ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)
@@ -70,7 +72,7 @@ int	verify_ceil(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	i = 0;
 	if (ft_strcmp("C", *buffer))
 		return (0);
-	temp = ft_split(*(buffer + 1), ',');
+	temp = ft_split_with_empty(*(buffer + 1), ',');
 	while (temp[i])
 	{
 		if (!is_num(temp[i]) || ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)

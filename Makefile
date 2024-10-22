@@ -39,7 +39,7 @@ SRC = ./src/main.c \
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
       ./includes/structures.h
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -fsanitize=address -g #-Werror
 LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
@@ -48,7 +48,7 @@ OBJ = $(SRC:.c=.o)
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	@$(CC) $(CFLAGS) $(OBJ) -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) -fsanitize=address -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 
