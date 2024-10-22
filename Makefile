@@ -75,8 +75,8 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "$(RED)\t\t✓ deleted $(NAME)$(RESET)"
 	@$(MAKE) fclean -C $(LIBFT_PATH) > /dev/null
-	@echo "$(RED)\t\t✓ deleted libft$(RESET)"
 	@$(MAKE) clean -C $(MLX_PATH) > /dev/null
+	@echo "$(RED)\t\t✓ deleted libft$(RESET)"
 	@echo "$(RED)\t\t✓ deleted mlx$(RESET)"
 
 re: fclean all
