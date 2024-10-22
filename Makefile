@@ -54,26 +54,21 @@ $(NAME): $(OBJ) $(LIB)
 
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_PATH) > /dev/null
-	@echo "$(GREEN)\t\t✓ LIBFT$(RESET)"
+	@echo "$(GREEN)\t\t✓ libft$(RESET)"
 
 %.o: %.c
-	@echo " $(YELLOW)$(BOLD)$(ITALIC)COMPILE OBJECT $(@)$(RESET)"
 	@$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
 
 
 clean:
-	@echo "$(MAGENTA)>>>> Start removing $(NAME) Object files <<<<$(RESET)"
 	@rm -f $(OBJ)
 	@echo "$(RED)\t\t✓ deleted objects $(NAME)$(RESET)"
-	@echo "$(MAGENTA)>>>> Start removing libft Object files <<<<$(RESET)"
 	@$(MAKE) clean -C $(LIBFT_PATH) > /dev/null
 	@echo "$(RED)\t\t✓ deleted objects libft$(RESET)"
 
 fclean: clean
-	@echo "$(MAGENTA)>>>> Start removing $(NAME) <<<<$(RESET)"
 	@rm -f $(NAME)
 	@echo "$(RED)\t\t✓ deleted $(NAME)$(RESET)"
-	@echo "$(MAGENTA)>>>> Start removing libft <<<<$(RESET)"
 	@$(MAKE) fclean -C $(LIBFT_PATH) > /dev/null
 	@echo "$(RED)\t\t✓ deleted libft$(RESET)"
 
