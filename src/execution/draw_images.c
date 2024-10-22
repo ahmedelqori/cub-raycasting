@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/14 03:53:38 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 16:26:16 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:38:42 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	paint_on_screen_by_pixel(t_texturedata *img, int x, int y, int color)
 {
 	char	*dst;
 
-	if (color == (int)0x00980088 || color == (int)16711935)
+	if (color == (int)0x00980088)
 		return ;
 	dst = img->addr + (y * img->line_length + x * (img->bits_per_pixel / 8));
 	*(unsigned int *)dst = color;
