@@ -34,7 +34,8 @@ SRC = ./src/main.c \
       ./src/parsing/upload_content.c \
       ./src/parsing/utils.c \
       ./src/parsing/get_next_line.c \
-      ./src/parsing/get_next_line_utils.c
+      ./src/parsing/get_next_line_utils.c\
+      ./src/execution/handle_mouse.c
 
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
       ./includes/structures.h

@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:16:18 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 18:37:52 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:55:45 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@
 # define X 'x'
 # define Y 'y'
 
+# define CX 0
+# define CY 1
+
+# define WX 0
+# define WY 1
+
 # define NORTH_X 0.0f
 # define NORTH_Y -1.0f
 # define SOUTH_X 0.0f
@@ -90,6 +96,8 @@
 
 # define MOVE_SPEED 0.02f
 # define ROTATION_SPEED 0.01f
+
+# define MOUSE_SENSITIVITY 0.1f
 
 # define DISTANCE_IN_FORWARD -0.22f
 # define DISTANCE_IN_BACKWARD 0.8f

@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:15:05 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/10/21 16:24:03 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:56:16 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ void			calc_step_for_y_x(t_container *container);
 void			draw_images_to_game(t_container *game, int x);
 void			digital_differential_analysis(t_container *game);
 void			check_hit(t_container *container);
+int				handle_mouse(int x, int y, t_container *container);
+void			camera_left_right(t_container *container, float flag);
 
 #endif
