@@ -37,11 +37,6 @@ int	ft_verify_line(char *string, t_parsing *data, t_parsing_helper *helper)
 	char	**buffer;
 
 	buffer = ft_split(string, ' ');
-	if (buffer_counting(buffer) != 2)
-	{
-		free_buffer(buffer, 1);
-		return (0);
-	}
 	if (!ft_verify_textures(buffer, data, helper)
 		&& !ft_verify_floor_ceil(buffer, data, helper))
 	{
