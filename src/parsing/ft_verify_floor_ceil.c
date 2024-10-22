@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:25 by relhamma          #+#    #+#             */
-/*   Updated: 2024/10/22 15:55:05 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:41:12 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ char	*purge_space(char *string)
 	int		k;
 
 	k = 0;
+	i = 0;
 	if (!*string)
 		return (string);
-	size = ft_strlen(string) - 1;
-	i = 0;
+	size = (int)ft_strlen(string) - 1;
 	while (string[i] && string[i] == ' ')
 		i++;
-	if (i == size)
+	if (i == (size + 1))
 		return (string);
 	while (string[size] == ' ')
 		size--;
