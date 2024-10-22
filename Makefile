@@ -66,7 +66,6 @@ $(MLX):
 %.o: %.c
 	@$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
 
-
 clean:
 	@rm -f $(OBJ)
 	@echo "$(RED)\t\t✓ deleted objects $(NAME)$(RESET)"
