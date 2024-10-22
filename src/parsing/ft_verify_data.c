@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:23 by relhamma          #+#    #+#             */
-/*   Updated: 2024/10/22 11:34:31 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:36:40 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,38 +30,6 @@ int	buffer_counting(char **string)
 	while (string[i])
 		i++;
 	return (i);
-}
-
-static char* ft_strdup_buffer(char **temp_2, char c)
-{
-	char buffer[2048];
-	int i;
-	char *temp;
-	char *string;
-	int k;
-
-	string = *temp_2;
-	i = 0;
-	temp = buffer;
-	k = 0;
-	while (string[i] && string[i] == ' ')
-		i++;
-	while (string[i] && string[i] != c)
-		buffer[k++] = string[i++];
-	*(temp_2) += i;
-	buffer[k] = 0;
-	return temp;
-}
-
-static char** ft_split_2(char *string)
-{
-	char **buffer;
-
-	buffer = malloc(sizeof(char *) * 3);
-	buffer[0] = ft_strdup(ft_strdup_buffer(&string, ' '));
-	buffer[1] = ft_strdup(ft_strdup_buffer(&string, 0));
-	buffer[2] = 0;
-	return buffer;
 }
 
 int	ft_verify_line(char *string, t_parsing *data, t_parsing_helper *helper)

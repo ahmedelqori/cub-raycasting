@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:01:25 by relhamma          #+#    #+#             */
-/*   Updated: 2024/10/22 11:28:42 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:55:05 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,32 @@ int	is_num(char *line)
 	return (1);
 }
 
+char *purge_space(char *string)
+{
+	int i;
+	int size;
+	char *temp;
+	int k;
+
+	k = 0;
+	if (!*string)
+		return string;
+	size = ft_strlen(string) - 1;
+	i = 0;
+	while (string[i] && string[i] == ' ')
+		i++;
+	if (i == size)
+		return string;
+	while (string[size] == ' ')
+		size--;
+	temp = malloc(size - i + 2);
+	while (i <= size)
+		temp[k++] = string[i++];
+	temp[k] = 0;
+	free(string);
+	return temp;
+}
+
 int	verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
 {
 	char	**temp;
@@ -46,6 +72,7 @@ int	verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	temp = ft_split_with_empty(*(buffer + 1), ',');
 	while (temp[i])
 	{
+		temp[i] = purge_space(temp[i]);
 		if (!is_num(temp[i]) || ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)
 			error = 1;
 		i++;
@@ -75,6 +102,7 @@ int	verify_ceil(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	temp = ft_split_with_empty(*(buffer + 1), ',');
 	while (temp[i])
 	{
+		temp[i] = purge_space(temp[i]);
 		if (!is_num(temp[i]) || ft_atoi(temp[i]) < 0 || ft_atoi(temp[i]) > 255)
 			error = 1;
 		i++;

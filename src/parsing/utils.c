@@ -6,7 +6,7 @@
 /*   By: relhamma <relhamma@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:02:04 by relhamma          #+#    #+#             */
-/*   Updated: 2024/10/21 15:10:14 by relhamma         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:36:50 by relhamma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,35 @@ int	ft_strcmp_1(char *s1, char *s2)
 		return (0);
 	else
 		return (ft_strcmp_1(s1 + 1, s2 + 1));
+}
+
+static char* ft_strdup_buffer(char **temp_2, char c)
+{
+	char *buffer;
+	int i;
+	char *string;
+	int k;
+
+	buffer = malloc(2048);
+	string = *temp_2;
+	i = 0;
+	k = 0;
+	while (string[i] && string[i] == ' ')
+		i++;
+	while (string[i] && string[i] != c)
+		buffer[k++] = string[i++];
+	*(temp_2) += i;
+	buffer[k] = 0;
+	return buffer;
+}
+
+char** ft_split_2(char *string)
+{
+	char **buffer;
+
+	buffer = malloc(sizeof(char *) * 3);
+	buffer[0] = ft_strdup_buffer(&string, ' ');
+	buffer[1] = ft_strdup_buffer(&string, 0);
+	buffer[2] = 0;
+	return buffer;
 }
