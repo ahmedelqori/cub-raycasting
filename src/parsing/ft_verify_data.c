@@ -32,11 +32,43 @@ int	buffer_counting(char **string)
 	return (i);
 }
 
+static char* ft_strdup_buffer(char **temp_2, char c)
+{
+	char buffer[2048];
+	int i;
+	char *temp;
+	char *string;
+	int k;
+
+	string = *temp_2;
+	i = 0;
+	temp = buffer;
+	k = 0;
+	while (string[i] && string[i] == ' ')
+		i++;
+	while (string[i] && string[i] != c)
+		buffer[k++] = string[i++];
+	*(temp_2) += i;
+	buffer[k] = 0;
+	return temp;
+}
+
+static char** ft_split_2(char *string)
+{
+	char **buffer;
+
+	buffer = malloc(sizeof(char *) * 3);
+	buffer[0] = ft_strdup(ft_strdup_buffer(&string, ' '));
+	buffer[1] = ft_strdup(ft_strdup_buffer(&string, 0));
+	buffer[2] = 0;
+	return buffer;
+}
+
 int	ft_verify_line(char *string, t_parsing *data, t_parsing_helper *helper)
 {
 	char	**buffer;
 
-	buffer = ft_split(string, ' ');
+	buffer = ft_split_2(string);
 	if (!ft_verify_textures(buffer, data, helper)
 		&& !ft_verify_floor_ceil(buffer, data, helper))
 	{
