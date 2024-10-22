@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:10:19 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/11 15:10:55 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:44:32 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static void	move_every_direction(t_container *container, char flag);
 static void	forward_backward(t_container *cub, char flag, float distance);
 static void	right_left(t_container *container, char flag, float distance);
-static void	camera_left_right(t_container *container, float flag);
 
 void	handle_movement(t_container *container)
 {
@@ -83,7 +82,7 @@ static void	right_left(t_container *container, char flag, float distance)
 		container->player.pos.horz += container->player.dir.vert * MOVE_SPEED;
 }
 
-static void	camera_left_right(t_container *container, float flag)
+void	camera_left_right(t_container *container, float flag)
 {
 	double	direction_x;
 	double	plane_x;
