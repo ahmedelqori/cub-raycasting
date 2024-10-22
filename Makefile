@@ -6,8 +6,8 @@ MAGENTA = \033[1;35m
 BLUE = \033[34;1;3m
 
 CC = cc
-NAME = cub
-NAME_BONUS = cub_bonus
+NAME = cub3D
+NAME_BONUS = cub3D_bonus
 
 SRC = ./src/main.c \
 	./src/parsing/ft_parsing.c \
@@ -24,7 +24,6 @@ SRC = ./src/main.c \
 	./src/execution/raycast_math.c \
 	./src/execution/draw_images.c \
 	./src/execution/ray_hit_the_wall.c \
-	./src/execution/handle_mouse.c \
 	./src/parsing/ft_normalize_map.c \
 	./src/parsing/ft_verify_map.c \
 	./src/parsing/ft_utils.c \
