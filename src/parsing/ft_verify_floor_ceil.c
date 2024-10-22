@@ -17,38 +17,22 @@ int	create_trgb(int t, int r, int g, int b)
 	return (t << 24 | r << 16 | g << 8 | b);
 }
 
-int	is_num(char *line)
+char	*purge_space(char *string)
 {
-	int	i;
-
-	i = 0;
-	while(is_space(line[i]))
-		i++;
-	while (line[i])
-	{
-		if (line[i] < '0' || line[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-char *purge_space(char *string)
-{
-	int i;
-	int size;
-	char *temp;
-	int k;
+	int		i;
+	int		size;
+	char	*temp;
+	int		k;
 
 	k = 0;
 	if (!*string)
-		return string;
+		return (string);
 	size = ft_strlen(string) - 1;
 	i = 0;
 	while (string[i] && string[i] == ' ')
 		i++;
 	if (i == size)
-		return string;
+		return (string);
 	while (string[size] == ' ')
 		size--;
 	temp = malloc(size - i + 2);
@@ -56,7 +40,7 @@ char *purge_space(char *string)
 		temp[k++] = string[i++];
 	temp[k] = 0;
 	free(string);
-	return temp;
+	return (temp);
 }
 
 int	verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
@@ -85,8 +69,7 @@ int	verify_floor(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	data->floor = create_trgb(0, ft_atoi(temp[0]), ft_atoi(temp[1]),
 			ft_atoi(temp[2]));
 	helper->f_found++;
-	free_buffer(temp, 1);
-	return (1);
+	return (free_buffer(temp, 1), 1);
 }
 
 int	verify_ceil(char **buffer, t_parsing *data, t_parsing_helper *helper)
@@ -115,8 +98,7 @@ int	verify_ceil(char **buffer, t_parsing *data, t_parsing_helper *helper)
 	data->ceil = create_trgb(0, ft_atoi(temp[0]), ft_atoi(temp[1]),
 			ft_atoi(temp[2]));
 	helper->c_found++;
-	free_buffer(temp, 1);
-	return (1);
+	return (free_buffer(temp, 1), 1);
 }
 
 int	ft_verify_floor_ceil(char **buffer, t_parsing *data,

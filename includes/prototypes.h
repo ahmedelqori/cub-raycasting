@@ -42,8 +42,9 @@ char			*ft_strdup_line(const char *s1, int j);
 char			*get_next_line(int fd);
 int				ft_strcmp_1(char *s1, char *s2);
 char			*ft_substr(char *str);
-char	*ft_strjoin(char *s1, char *s2);
-char **ft_split_2(char *string);
+char			*ft_strjoin(char *s1, char *s2);
+char			**ft_split_2(char *string);
+int				is_num(char *line);
 
 // ======================= EXECUTION ======================= //
 

@@ -22,12 +22,26 @@ int	ft_strcmp_1(char *s1, char *s2)
 		return (ft_strcmp_1(s1 + 1, s2 + 1));
 }
 
-static char* ft_strdup_buffer(char **temp_2, char c)
+int	is_num(char *line)
 {
-	char *buffer;
-	int i;
-	char *string;
-	int k;
+	int	i;
+
+	i = 0;
+	while (line[i])
+	{
+		if (line[i] < '0' || line[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+static char	*ft_strdup_buffer(char **temp_2, char c)
+{
+	char	*buffer;
+	int		i;
+	char	*string;
+	int		k;
 
 	buffer = malloc(2048);
 	string = *temp_2;
@@ -39,16 +53,16 @@ static char* ft_strdup_buffer(char **temp_2, char c)
 		buffer[k++] = string[i++];
 	*(temp_2) += i;
 	buffer[k] = 0;
-	return buffer;
+	return (buffer);
 }
 
-char** ft_split_2(char *string)
+char	**ft_split_2(char *string)
 {
-	char **buffer;
+	char	**buffer;
 
 	buffer = malloc(sizeof(char *) * 3);
 	buffer[0] = ft_strdup_buffer(&string, ' ');
 	buffer[1] = ft_strdup_buffer(&string, 0);
 	buffer[2] = 0;
-	return buffer;
+	return (buffer);
 }
