@@ -40,22 +40,26 @@ SRC = ./src/main.c \
 LIB = ./includes/cub.h ./includes/includes.h ./includes/macros.h ./includes/prototypes.h \
       ./includes/structures.h
 
-CFLAGS = -Wall -Wextra -fsanitize=address -g #-Werror
+CFLAGS = -Wall -Wextra  -Werror -fsanitize=address -g
 LIBFT_PATH = ./libft
+MLX_PATH = ./minilibx-linux
 LIBFT = $(LIBFT_PATH)/libft.a
-
+MLX= $(MLX_PATH)/libmlx.a
 OBJ = $(SRC:.c=.o)
 
-all: $(LIBFT) $(NAME)
+all: $(MLX) $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ) $(LIB)
-	@$(CC) $(CFLAGS) $(OBJ) -fsanitize=address -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) -o $(NAME)
+	@$(CC) $(CFLAGS) $(OBJ) -fsanitize=address -Lminilibx-linux -lmlx -lXext -lX11 -lm $(LIBFT) $(MLX) -o $(NAME)
 	@echo "$(GREEN)\t\t✓ $(NAME)$(RESET)"
 	@echo "$(MAGENTA)Usage:\n\t$(YELLOW)./cub map.cub$(RESET)"
 
 $(LIBFT):
 	@$(MAKE) -C $(LIBFT_PATH) > /dev/null
 	@echo "$(GREEN)\t\t✓ libft$(RESET)"
+$(MLX):
+	@$(MAKE) -C $(MLX_PATH) > /dev/null
+	@echo "$(GREEN)\t\t✓ mlx$(RESET)"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -Iminilibx-linux -O3 -c $< -o $@
@@ -72,6 +76,8 @@ fclean: clean
 	@echo "$(RED)\t\t✓ deleted $(NAME)$(RESET)"
 	@$(MAKE) fclean -C $(LIBFT_PATH) > /dev/null
 	@echo "$(RED)\t\t✓ deleted libft$(RESET)"
+	@$(MAKE) clean -C $(MLX_PATH) > /dev/null
+	@echo "$(RED)\t\t✓ deleted mlx$(RESET)"
 
 re: fclean all
 

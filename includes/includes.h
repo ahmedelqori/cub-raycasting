@@ -6,7 +6,7 @@
 /*   By: ael-qori <ael-qori@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 14:14:16 by ael-qori          #+#    #+#             */
-/*   Updated: 2024/09/08 14:14:55 by ael-qori         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:28:37 by ael-qori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <unistd.h>
 # include "../libft/libft.h"
-# include <mlx.h>
+// # include <mlx.h>
+# include "../minilibx-linux/mlx.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdbool.h>
